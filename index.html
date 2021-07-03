@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.min.css">
+	<!-- ---fonts--- -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+	<!-- ---/fonts--- -->
+   <title>Rappelz</title>
+</head>
+<body style="">
+	<style>
+		.header-bottom__btn {
+  background-image: url(../img/header/button.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  transition: 0s;
+  }
+  .header-bottom__btn:hover {
+  background-image: url(../img/header/btns.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  }
+	</style>
+<style>
+	.info-status__card-back {
+    padding: 26px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 0.1s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateX(
+180deg
+);
+    transform: rotateX(
+180deg
+);
+}
+.info-status__card-front {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 37px 26px;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 1s ease;
+    transition: all 0.1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+</style>
+<style type="text/css">
+	/* body:after { 
+			content: ''; 
+			position: absolute; 
+			top: 0; left: 0; 
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(20,24,28,1) 0%, rgba(0,0,0,0)  100%);
+			z-index: 999;width: 150px;height: 100%;
+		}
+	body:before {	content: ''; 
+			position: absolute; 
+			top: 0; right: 0; 
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(20,24,28,1)  100%);
+			z-index: 999;width: 150px;height: 100%;
+	} */
+	
+	html, body {
+		padding: 0;
+		margin: 0;
+		position: relative;
+		width: 100%;
+		height: initial;
+	}
+	@media (max-width: 1000px) {
+	
+  		body:after { 
+			content: ''; 
+			position: absolute; 
+			top: 0; left: 0; 
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0)  100%);
+			z-index: 999;width: 70px;height: 100%;
+		}
+	body:before {	content: ''; 
+			position: absolute; 
+			top: 0; right: 0; 
+			background: rgb(0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8)  100%);
+			z-index: 999;width: 70px;height: 100%;
+	}
+	}
+</style>
+<style>
+
+.header-top__logo img {
+    height: 50px;
+    width: 50px;
+	/* margin-top: -5px !important; */
+}
+</style>
+<div style=" ">
+	
+</div>
+<div id="shadow">
+	<div class="wrapper">
+		<!-- ---header--- -->
+<header class="header" style="z-index: 99999999999;">   
+      <div class="header-top">
+         <div class="container header-top__body" style="padding-left: 2px;padding: 0px 0px 0px 2px;">
+            <div class="header-top__logo-wrap">
+               <a class="header-top__logo" href="index.html">
+                  <img src="112.png" alt="Reborn"  style="margin-right: 0px; margin: 5px 0px 5px 14px !important; width: 145px;height: auto;">
+                  <!-- <span style="  -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+;background: ;color;				  ">REBORN</span> -->
+               </a>
+            </div>
+            <nav class="header-top__nav">
+               <ul class="header-top__list">
+                  <li>
+                     <a class="header-top__link _has-menu" href="javascript:void(0);">GAMES</a>
+                  </li>
+                  <li>
+                     <a class="header-top__link" href="#">NEWS</a>
+                  </li>
+                  <li>
+                     <a class="header-top__link" href="#">COMMUNITY</a>
+                  </li>
+                  <li>
+                     <a class="header-top__link" href="#">SUPPORT</a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="header-top__links">
+               <div class="header-top__login">
+                  <a href="#">УЧЕТНАЯ ЗАПИСЬ</a>
+               </div>
+               <div class="header-top__language">
+               	RUSSIAN <div class="header-top__arrow"></div>
+               	<ul class="header-top__sublist">
+               		<li>
+               			<a href="#">RUSSIAN</a>
+               	   </li>
+               		<li>
+               			<a href="#">ENGLISH</a>
+               	   </li>
+               		<li>
+               			<a href="#">CHINA</a>
+               	   </li>
+               		<li>
+               			<a href="#">KOREAN</a>
+               	   </li>
+               	</ul>
+               </div>
+            </div>
+            <div class="header__burger">
+               <span></span>
+            </div>
+         </div>
+      </div>  
+      <div class="header-bottom">
+         <div class="container header-bottom__body" style="padding-right: 0px;">
+            <nav class="header-bottom__nav">
+               <ul class="header-bottom__list">
+                  <li>
+                     <a class="header-bottom__link _active" href="#">Главная</a>
+                  </li>
+                  <li>
+                     <a class="header-bottom__link" href="#">Аукцион</a>
+                  </li>
+                  <li>
+                     <a class="header-bottom__link" href="#">Статистика</a>
+                  </li>
+                  <li>
+                     <a class="header-bottom__link" href="#">База знаний</a>
+                  </li>
+                  <li>
+                     <a class="header-bottom__link" href="#">Партнерство</a>
+                  </li>
+               </ul>
+            </nav>
+            <a class="header-bottom__btn btn" style="margin: ;" href="#">РЕГИСТРАЦИЯ</a>
+         </div>
+      </div>
+	  
+      <div class="header-mobile">
+         <nav class="header-mobile__top">
+            <ul class="header-mobile__top-list">
+               <li>
+                  <a href="" class="header-top__link _has-menu">GAMES</a>
+               </li>
+               <li>
+                  <a href="" class="header-top__link">NEWS</a>
+               </li>
+               <li>
+                  <a href="" class="header-top__link">COMMUNITY</a>
+               </li>
+               <li>
+                  <a href="" class="header-top__link">SUPPORT</a>
+               </li>
+            </ul>
+         </nav>
+         <nav class="header-mobile__middle">
+            <ul class="header-mobile__middle-list">
+               <li>
+                  <a href="#" class="header-bottom__link _active">Главная</a>
+               </li>
+               <li>
+                  <a href="#" class="header-bottom__link">Аукцион</a>
+               </li>
+               <li>
+                  <a href="#" class="header-bottom__link">Статистика</a>
+               </li>
+               <li>
+                  <a href="#" class="header-bottom__link">База знаний</a>
+               </li>
+               <li>
+                  <a href="#" class="header-bottom__link">Партнерство</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="header-mobile__bottom">
+            <div class="header-top__login">
+               <a href="#">УЧЁТНАЯ ЗАПИСЬ</a>
+            </div>
+            <div class="header-top__login">
+               <a href="#">РЕГИСТРАЦИЯ</a>
+            </div>
+            <div class="header-top__language">
+               RUSSIAN <div class="header-top__arrow"></div>
+               <ul class="header-top__sublist">
+               	<li>
+               		<a href="#">RUSSIAN</a>
+                  </li>
+               	<li>
+               		<a href="#">ENGLISH</a>
+                  </li>
+               	<li>
+               		<a href="#">CHINA</a>
+                  </li>
+               	<li>
+               		<a href="#">KOREAN</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+</header>
+<!-- ---/header--- -->
+		<!-- ---.main--- -->
+		<main class="main">
+			<!-- ---game--- -->
+			<section class="game">
+				<div class="game-info" style="background-image: url('bg_main1.png');">
+					<div>
+						<video class="game-info__video" autoplay loop muted style="width: 100%;opacity: 0.6" src="sf.mp4"></video>
+						<div class="container game-info__body">
+							<div class="game-info__logo" style="z-index: 999">
+								<picture><source srcset="img/game/logo.webp" type="image/webp"><img src="img/game/logo.png" alt="Rappelz Remastered"></picture>
+							</div>
+							<h1 class="game-info__title" style="z-index: 999">
+								ЛУЧШЕЕ ИЗ ВСЕХ ЭПИКОВ <br> В ОДНОЙ ИГРЕ
+							</h1>
+						</div>
+					</div>
+				</div>
+				<div class="game-separator">
+					<div class="container game-separator__body">
+						<p class="game-separator__text">
+							Начни свое путешествие по новому удивительному миру <span>Rappelz</span> 
+							прямо сейчас!
+						</p>
+						<a class="game-separator__btn btn" href="#">НАЧАТЬ ИГРАТЬ</a>
+					</div>
+				</div>
+				<style>
+					.game-slider img{
+						border-radius: 10px;
+						cursor: pointer;
+						
+					}
+				</style>
+				<div class="game-slider">
+					<div class="container">
+						<div class="game-slider__body swiper-container">
+							<div class="swiper-wrapper game-slider__wrapper">
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+								<div class="game-slider__slide swiper-slide">
+									<div class="game-slider__image">
+										<picture>
+											<source srcset="img/img.webp" type="image/webp">
+											<img src="img/img.png" alt="img">
+										</picture>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="game-slider__prev"></div>
+						<div class="game-slider__next"></div>
+						<div class="game-slider__pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- ---/game--- -->
+			<!-- ---info--- -->
+			<div class="info" style="background-image: url('bg_main2.png');">
+				<div class="container">
+					<div class="info__grid">
+
+						<!-- ---info-news--- -->
+						<section class="info-news">
+							<h2 class="info-news__title section-title">
+								ПОСЛЕДНИЕ НОВОСТИ
+							</h2>
+							<div class="info-news__news">
+								<div class="info-news__new">
+									<a href="#" class="info-news__image">
+										<picture><source srcset="img/info/card-img.webp" type="image/webp"><img src="img/info/card-img.png" alt="img"></picture>
+									</a>
+									<div class="info-news__content">
+										<a href="#" class="info-news__card-title">
+											Результаты технических работ 28.05.2021
+										</a>
+										<p class="info-news__card-text">
+											Внеплановые технические работы завершены.
+											Предлагаем ознакомиться со списком изменений.
+										</p>
+										<div class="info-news__card-bottom">
+											<a class="info-news__card-btn" href="#">Подробнее</a>
+											<div class="info-news__card-category">Другое</div>
+											<div class="info-news__card-date">31.05.2021</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-news__new">
+									<a href="#" class="info-news__image">
+										<picture><source srcset="img/info/card-img.webp" type="image/webp"><img src="img/info/card-img.png" alt="img"></picture>
+									</a>
+									<div class="info-news__content">
+										<a href="#" class="info-news__card-title">
+											Результаты технических работ 28.05.2021
+										</a>
+										<p class="info-news__card-text">
+											Внеплановые технические работы завершены.
+											Предлагаем ознакомиться со списком изменений.
+										</p>
+										<div class="info-news__card-bottom">
+											<a class="info-news__card-btn" href="#">Подробнее</a>
+											<div class="info-news__card-category">Событие</div>
+											<div class="info-news__card-date">31.05.2021</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-news__new">
+									<a href="#" class="info-news__image">
+										<picture><source srcset="img/info/card-img.webp" type="image/webp"><img src="img/info/card-img.png" alt="img"></picture>
+									</a>
+									<div class="info-news__content">
+										<a href="#" class="info-news__card-title">
+											Результаты технических работ 28.05.2021
+										</a>
+										<p class="info-news__card-text">
+											Внеплановые технические работы завершены.
+											Предлагаем ознакомиться со списком изменений.
+										</p>
+										<div class="info-news__card-bottom">
+											<a class="info-news__card-btn" href="#">Подробнее</a>
+											<div class="info-news__card-category">Другое</div>
+											<div class="info-news__card-date">31.05.2021</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-news__new">
+									<a href="#" class="info-news__image">
+										<picture><source srcset="img/info/card-img.webp" type="image/webp"><img src="img/info/card-img.png" alt="img"></picture>
+									</a>
+									<div class="info-news__content">
+										<a href="#" class="info-news__card-title">
+											Результаты технических работ 28.05.2021
+										</a>
+										<p class="info-news__card-text">
+											Внеплановые технические работы завершены.
+											Предлагаем ознакомиться со списком изменений.
+										</p>
+										<div class="info-news__card-bottom">
+											<a class="info-news__card-btn" href="#">Подробнее</a>
+											<div class="info-news__card-category">Другое</div>
+											<div class="info-news__card-date">31.05.2021</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-news__new">
+									<a href="#" class="info-news__image">
+										<picture><source srcset="img/info/card-img.webp" type="image/webp"><img src="img/info/card-img.png" alt="img"></picture>
+									</a>
+									<div class="info-news__content">
+										<a href="#" class="info-news__card-title">
+											Результаты технических работ 28.05.2021
+										</a>
+										<p class="info-news__card-text">
+											Внеплановые технические работы завершены.
+											Предлагаем ознакомиться со списком изменений.
+										</p>
+										<div class="info-news__card-bottom">
+											<a class="info-news__card-btn" href="#">Подробнее</a>
+											<div class="info-news__card-category">Другое</div>
+											<div class="info-news__card-date">31.05.2021</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-news__all">
+									<a href="#">Все новости</a>
+								</div>
+							</div>
+						</section>
+						<!-- ---/info-news--- -->
+
+						<!-- ---info-status--- -->
+						<section class="info-status">
+							<h2 class="info-status__title section-title">
+								СТАТУС СЕРВЕРОВ
+							</h2>
+							<div class="info-status__card" style="background-image: url('img/info/status-card.png');">
+								<div class="info-status__card-front">
+									<div class="info-status__card-status">RR: NEW</div>
+									<div class="info-status__card-image">
+										<picture><source srcset="img/info/card-red.webp" type="image/webp"><img src="img/info/card-red.png" alt="img"></picture>
+									</div>
+									<div class="info-status__card-online">
+										Онлайн: <span>645</span>
+									</div>
+								</div>
+								<div class="info-status__card-back">
+									<div class="info-status__card-top">
+										<div class="info-status__card-epic">Epic: 5</div>
+										<div class="info-status__card-patch">Patch: 5.2</div>
+									</div>
+									<p class="info-status__card-text card-text">
+										Кол-во уникальных игроков 
+									</p>
+									<div class="info-status__card-bottom">
+										<div class="info-status__card-week card-text">
+											За неделю: <span>3 220</span>
+										</div>
+										<div class="info-status__card-month card-text">
+											За месяц: <span>15 200</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-status__card" style="background-image: url('img/info/status-card.png');">
+								<div class="info-status__card-front">
+									<div class="info-status__card-status">RR: MAIN</div>
+									<div class="info-status__card-image">
+										<picture><source srcset="img/info/card-green.webp" type="image/webp"><img src="img/info/card-green.png" alt="img"></picture>
+									</div>
+									<div class="info-status__card-online">
+										Онлайн: <span>232</span>
+									</div>
+								</div>
+								<div class="info-status__card-back">
+									<div class="info-status__card-top">
+										<div class="info-status__card-epic">Epic: 5</div>
+										<div class="info-status__card-patch">Patch: 5.2</div>
+									</div>
+									<p class="info-status__card-text card-text">
+										Кол-во уникальных игроков 
+									</p>
+									<div class="info-status__card-bottom">
+										<div class="info-status__card-week card-text">
+											За неделю: <span>3 220</span>
+										</div>
+										<div class="info-status__card-month card-text">
+											За месяц: <span>15 200</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="info-status__download" href="#" download>
+								<picture><source srcset="img/info/download.webp" type="image/webp"><img src="img/info/download.png" alt="download"></picture>
+								<div class="info-status__download-text">DOWNLOAD</div>
+							</a>
+							<div class="info-status__table" style="background: rgba(0,0,0,0.5);
+							border-radius: 10px;">
+								<h3 class="info-status__table-title">
+									<span>TOP 10</span> DONORS
+								</h3>
+								<div class="info-status__table-body">
+									<div class="info-status__table-row">
+										<div class="info-status__table-row-title">№</div>
+										<div class="info-status__table-row-name">NAME</div>
+										<div class="info-status__table-row-title">RATING</div>
+									</div>
+									<div class="info-status__table-row _top">
+										<div class="info-status__table-position ">1.</div>
+										<div class="info-status__table-name">Saro</div>
+										<div class="info-status__table-count ">189464</div>
+									</div>
+									<div class="info-status__table-row _top">
+										<div class="info-status__table-position ">2.</div>
+										<div class="info-status__table-name">Agusta</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row _top">
+										<div class="info-status__table-position ">3.</div>
+										<div class="info-status__table-name">ImTheFirstLegend</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">4.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">5.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">6.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">7.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">8.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">9.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+									<div class="info-status__table-row">
+										<div class="info-status__table-position ">10.</div>
+										<div class="info-status__table-name">NameName</div>
+										<div class="info-status__table-count ">167845</div>
+									</div>
+								</div>
+								
+							</div>
+						</section>
+						<!-- ---/info-status--- -->
+
+					</div>
+				</div>
+			</div>
+			<!-- ---/info--- -->
+			<!-- ---stream--- -->
+			<section class="stream">
+				<div class="container stream__body">
+					<div class="stream__top">
+						<h2 class="stream__title section-title">
+							НАШИ СТРИМЕРЫ
+						</h2>
+						<a class="stream__link" href="#">Как добавить стрим?</a>
+					</div>
+					<div class="stream__grid">
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+						<div class="stream__item">
+							<picture><source srcset="img/stream-img.webp" type="image/webp"><img src="img/stream-img.png" alt="streamer"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ---/stream--- -->
+			<!-- ---social--- -->
+			<section class="social" style="background-image: url('bg_main3.png');">
+				<div class="container social__body">
+					<div class="social__content">
+						<h2 class="social__title section-title">
+							МЫ В СОЦСЕТЯХ
+						</h2>
+						<p class="social__text">
+							ПРИСОЕДИНЯЙТЕСЬ К НАМ
+						</p>
+					</div>
+					<div class="social__links">
+						<a href="#" class="social__link _vk">
+							<picture><source srcset="img/social/vk.webp" type="image/webp"><img src="img/social/vk.png" alt="vk"></picture>
+						</a>
+						<a href="#" class="social__link _yt">
+							<picture><source srcset="img/social/yt.webp" type="image/webp"><img src="img/social/yt.png" alt="youtube"></picture>
+						</a>
+						<a href="#" class="social__link _disc">
+							<picture><source srcset="img/social/disc.webp" type="image/webp"><img src="img/social/disc.png" alt="discord"></picture>
+						</a>
+						<a href="#" class="social__link _telega">
+							<picture><source srcset="img/social/telega.webp" type="image/webp"><img src="img/social/telega.png" alt="telegram"></picture>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- ---/social--- -->
+		</main>
+		<!-- ---/main--- -->
+		<!-- ---footer--- -->
+<footer class="footer">
+   <div class="container footer__body">
+      <div class="footer__left">
+         <a class="header-top__logo" href="index.html">
+            <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo5.png" alt="Reborn"></picture>
+            <span>REBORN - GAME.NET</span>
+         </a>
+         <div class="footer__copy">© 2021 REBORN GAME</div>
+      </div>
+      <div class="footer__center">
+         <nav class="footer__nav">
+            <ul class="footer__list">
+               <li>
+                  <a href="#" class="footer__top-link">Поддержка</a>
+               </li>
+               <li>
+                  <a href="#" class="footer__top-link">Регистрация</a>
+               </li>
+               <li>
+                  <a href="#" class="footer__top-link">База знаний</a>
+               </li>
+               <li>
+                  <a href="#" class="footer__top-link">Новости</a>
+               </li>
+            </ul>
+         </nav>
+		 <style>
+			 .footer__bottom-link:hover{
+				color: #FF9D47
+			 }
+		 </style>
+         <div class="footer__links">
+            <a class="footer__bottom-link" href="#">Пользовательское соглашение</a>
+            <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+         </div>
+      </div>
+      <div class="footer__age">
+         18+
+      </div>
+      <div class="footer__right">
+         <div class="header-top__language footer__language">
+         		RUSSIAN <div class="header-top__arrow"></div>      
+         		<ul class="header-top__sublist">
+               	<li>
+               		<a href="#">RUSSIAN</a>
+                  </li>
+               	<li>
+               		<a href="#">ENGLISH</a>
+                  </li>
+               	<li>
+               		<a href="#">CHINA</a>
+                  </li>
+               	<li>
+               		<a href="#">KOREAN</a>
+                  </li>
+               </ul>
+         </div>
+         <a href="#" class="footer__site">ElitePvPers.com</a>
+      </div>
+      <div class="footer__mobile">
+         <div class="footer__mobile-top">
+            <div class="footer__age">18+</div>
+            <div class="header-top__language footer__language">
+            		RUSSIAN <div class="header-top__arrow"></div>
+            		<ul class="header-top__sublist">
+               		<li>
+               			<a href="#">RUSSIAN</a>
+               	   </li>
+               		<li>
+               			<a href="#">ENGLISH</a>
+               	   </li>
+               		<li>
+               			<a href="#">CHINA</a>
+               	   </li>
+               		<li>
+               			<a href="#">KOREAN</a>
+               	   </li>
+               	</ul>
+         	</div>
+         </div>
+         <a href="#" class="footer__site">ElitePvPers.com</a>
+      </div>
+   </div>
+</footer>
+<!-- ---/footer--- -->
+	</div>
+</div>
+	<!-- ---scripts--- -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="js/main.min.js"></script>
+	<!-- ---/scripts--- -->
+</body>
+</html>
